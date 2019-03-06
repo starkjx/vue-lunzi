@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/starkjx/vue-lunzi/issues"
   },
-  "homepage": "https://github.com/starkjx/vue-lunzi#readme"
+  "homepage": "https://github.com/starkjx/vue-lunzi#readme",
+  "dependencies": {
+    "vue": "^2.6.8"
+  }
 }
