@@ -1,0 +1,23 @@
+{
+  "name": "lunzi-demo",
+  "version": "0.0.1",
+  "description": "这是一个UI框架",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/starkjx/vue-lunzi.git"
+  },
+  "keywords": [
+    "Vue",
+    "UI"
+  ],
+  "author": "stark",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/starkjx/vue-lunzi/issues"
+  },
+  "homepage": "https://github.com/starkjx/vue-lunzi#readme"
+}
