@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ac3b8491-ae2c-4319-bf8c-0202708d85e3" name="Default Changelist" comment="第一个元素不需要设置margin-left">
+    <list default="true" id="ac3b8491-ae2c-4319-bf8c-0202708d85e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
@@ -58,10 +58,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="102" column="18" lean-forward="true" selection-start-line="102" selection-start-column="18" selection-end-line="102" selection-end-column="18" />
+            <state relative-caret-position="449">
+              <caret line="104" column="37" selection-start-line="104" selection-start-column="37" selection-end-line="104" selection-end-column="37" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
+                <element signature="e#307#330#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -148,7 +149,7 @@
       <option name="presentableId" value="Default" />
       <updated>1551856770143</updated>
       <workItem from="1551856772339" duration="5700000" />
-      <workItem from="1551922618875" duration="16285000" />
+      <workItem from="1551922618875" duration="16850000" />
     </task>
     <task id="LOCAL-00001" summary="npm install vue">
       <created>1551857098930</created>
@@ -255,11 +256,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551947279013</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="使用 chai.expect 添加四个测试用例">
+      <created>1551955709012</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1551955709012</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21985000" />
+    <option name="totallyTimeSpent" value="22550000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="919" y="363" width="1120" height="736" extended-state="0" />
@@ -304,7 +312,8 @@
     <MESSAGE value="完成button-group创建" />
     <MESSAGE value="检测g-button-group子元素是否为button" />
     <MESSAGE value="第一个元素不需要设置margin-left" />
-    <option name="LAST_COMMIT_MESSAGE" value="第一个元素不需要设置margin-left" />
+    <MESSAGE value="使用 chai.expect 添加四个测试用例" />
+    <option name="LAST_COMMIT_MESSAGE" value="使用 chai.expect 添加四个测试用例" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -362,10 +371,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="102" column="18" lean-forward="true" selection-start-line="102" selection-start-column="18" selection-end-line="102" selection-end-column="18" />
+        <state relative-caret-position="449">
+          <caret line="104" column="37" selection-start-line="104" selection-start-column="37" selection-end-line="104" selection-end-column="37" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#307#330#0" expanded="true" />
           </folding>
         </state>
       </provider>
