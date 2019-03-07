@@ -1,23 +1,21 @@
 <template>
     <button class="g-button" :class="{[`icon-${iconPosition}`]: true}">
-        <svg v-if="icon" class="icon">
-            <use v-bind:xlink:href=`#i-${icon}`></use>
-        </svg>
+        <g-icon v-if="icon" :name="icon"></g-icon>
         <div class="content">
             <slot></slot>
         </div>
-
     </button>
 </template>
 <script>
+    import Icon from "./icon";
     export default {
+        components: {Icon},
         props: {
             icon: {},
             iconPosition: {
                 TYPE: String,
                 default: 'left',
                 validator(value){
-                    console.log(value);
                     return value !== 'left' && value !== 'right' ? false : true;
                 }
             }
@@ -40,10 +38,10 @@
         &:hover{ border-color: var(--border-color-hover);}
         &:active{background-color: var(--button-active-bg);}
         &:focus{outline: none;}
-        > .icon{order: 1; margin-right: .1em; }
+        > .g-icon{order: 1; margin-right: .1em; }
         > .content{order: 2;}
         &.icon-right{
-            > .icon{ order:2; margin-right: 0; margin-left: .1em; }
+            > .g-icon{ order:2; margin-right: 0; margin-left: .1em; }
             > .content{ order: 1;}
         }
     }
