@@ -54,8 +54,6 @@
             > .icon{ order:2; margin-right: 0; margin-left: .1em; }
             > .content{ order: 1;}
         }
-        .loading{
-            animation: spin .8s infinite linear;
-        }
+        .loading{animation: spin .8s infinite linear;}
     }
 </style>
