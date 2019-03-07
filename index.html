@@ -41,10 +41,10 @@
     <g-button icon="right" icon-position="right">
         按钮
     </g-button>
-    <g-button icon="left">
+    <g-button icon="right" icon-position="right" :loading="loading2" @click="loading2 = !loading2">
         按钮
     </g-button>
-    <g-button>
+    <g-button :loading="loading1" @click="loading1 = !loading1">
         按钮
     </g-button>
 </div>
