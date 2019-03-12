@@ -13,5 +13,10 @@ new Vue({
   el: '#app',
   data: {
     loadingStatus: false
+  },
+  methods:{
+    inputChange(e){
+      console.log(e.target.value)
+    }
   }
 })
