@@ -1,15 +1,22 @@
 <template>
-    <svg class="g-icon">
-        <use v-bind:xlink:href=`#i-${name}`></use>
-    </svg>
+  <svg class="g-icon">
+    <use v-bind:xlink:href=`#i-${name}`></use>
+  </svg>
 </template>
 <script>
-    import './svg'
-    export default {
-        props: ['name']
-    }
+  import './svg'
+
+  export default {
+    name: 'LunziIcon',
+    props: ['name']
+  }
 </script>
-<style lang="scss">
-    .g-icon {width: 1em;height: 1em;vertical-align: -0.15em;fill: currentColor;overflow: hidden;
-    }
+<style lang="scss" scoped>
+  .g-icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+  }
 </style>
