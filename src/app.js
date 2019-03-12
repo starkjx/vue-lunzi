@@ -12,11 +12,12 @@ Vue.component('g-input', Input)
 new Vue({
   el: '#app',
   data: {
-    loadingStatus: false
+    loadingStatus: false,
+    message:'hi'
   },
   methods:{
     inputChange(e){
-      console.log(e.target.value)
+      console.log(e)
     }
   }
 })
