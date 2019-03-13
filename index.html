@@ -38,21 +38,24 @@
 </head>
 <body>
 <div id="app">
-  <g-row>
-    <g-col span="2">11111</g-col>
-    <g-col span="22">11111</g-col>
-  </g-row>
-  <g-row>
-    <g-col span="10">11111</g-col>
-    <g-col span="10">11111</g-col>
-    <g-col span="4">11111</g-col>
-  </g-row>
-  <g-row>
-    <g-col>11111</g-col>
-    <g-col>11111</g-col>
-    <g-col>11111</g-col>
-    <g-col>11111</g-col>
-  </g-row>
+  <div style="border: 1px solid black;">
+    <g-row gutter="20">
+      <g-col span="2">11111</g-col>
+      <g-col span="22">11111</g-col>
+    </g-row>
+    <g-row gutter="20">
+      <g-col span="4">11111</g-col>
+      <g-col span="18" offset="2">11111</g-col>
+    </g-row>
+    <g-row gutter="20">
+      <g-col span="6">11111</g-col>
+      <g-col span="18">11111</g-col>
+    </g-row>
+    <g-row gutter="20">
+      <g-col span="3">11111</g-col>
+      <g-col span="18" offset="3">11111</g-col>
+    </g-row>
+  </div>
   <hr>
   <div class="box">
     <g-input v-model="message"></g-input>
