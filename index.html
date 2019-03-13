@@ -39,62 +39,75 @@
 <body>
 <div id="app">
   <div style="border: 1px solid black;">
-    <g-row gutter="20">
-      <g-col span="2">11111</g-col>
-      <g-col span="22">122222</g-col>
+    <g-row>
+      <g-col span="2"
+        :phone="{span:24}"
+        :ipad="{span:8}"
+        :narrow-pc="{span:4}"
+        :pc="{span:2}"
+        :wide-pc="{span:1}"
+      >1111
+      </g-col>
+      <g-col span="22"
+        :phone="{span:24}"
+        :ipad="{span:16}"
+        :narrow-pc="{span:20}"
+        :pc="{span:22}"
+        :wide-pc="{span:23}"
+      >2222
+      </g-col>
     </g-row>
-    <g-row gutter="20">
-      <g-col span="4">11111</g-col>
-      <g-col span="18" offset="2">11111</g-col>
-    </g-row>
-    <g-row gutter="20">
-      <g-col span="6">11111</g-col>
-      <g-col span="18">11111</g-col>
-    </g-row>
-    <g-row gutter="20">
-      <g-col span="3">11111</g-col>
-      <g-col span="18" offset="3">11111</g-col>
-    </g-row>
   </div>
-  <hr>
-  <div class="box">
-    <g-input v-model="message"></g-input>
-    <p>{{message}}</p>
-    <button @click="message+=1">+1</button>
-  </div>
-  <div class="box">
-    <g-input value="张三" disabled></g-input>
-    <g-input value="李四" readonly></g-input>
-    <g-input value="王五"></g-input>
-  </div>
-  <div class="box">
-    <g-input value="王五" error="姓名不能少于两个字"></g-input>
-  </div>
-  <div class="box">
-    <g-input value="王五" @change="inputChange"></g-input>
-  </div>
-  <div class="box">
-    <g-button icon="setting">
-      按钮
-    </g-button>
-    <g-button icon="left" icon-position="left">
-      按钮
-    </g-button>
-    <g-button icon="right" icon-position="right" :loading="loadingStatus" @click="loadingStatus = !loadingStatus">
-      按钮
-    </g-button>
-    <g-button>
-      按钮
-    </g-button>
-    <g-button-group>
-      <g-button icon="left">上一页</g-button>
-      <g-button>更多</g-button>
-      <g-button icon="right" icon-position="right">下一页</g-button>
-    </g-button-group>
-  </div>
+    <!--<g-row gutter="20">-->
+      <!--<g-col span="4">11111</g-col>-->
+      <!--<g-col span="18" offset="2">11111</g-col>-->
+    <!--</g-row>-->
+    <!--<g-row gutter="20">-->
+      <!--<g-col span="6">11111</g-col>-->
+      <!--<g-col span="18">11111</g-col>-->
+    <!--</g-row>-->
+    <!--<g-row gutter="20">-->
+      <!--<g-col span="3">11111</g-col>-->
+      <!--<g-col span="18" offset="3">11111</g-col>-->
+    <!--</g-row>-->
+  <!--<hr>-->
+  <!--<div class="box">-->
+    <!--<g-input v-model="message"></g-input>-->
+    <!--<p>{{message}}</p>-->
+    <!--<button @click="message+=1">+1</button>-->
+  <!--</div>-->
+  <!--<div class="box">-->
+    <!--<g-input value="张三" disabled></g-input>-->
+    <!--<g-input value="李四" readonly></g-input>-->
+    <!--<g-input value="王五"></g-input>-->
+  <!--</div>-->
+  <!--<div class="box">-->
+    <!--<g-input value="王五" error="姓名不能少于两个字"></g-input>-->
+  <!--</div>-->
+  <!--<div class="box">-->
+    <!--<g-input value="王五" @change="inputChange"></g-input>-->
+  <!--</div>-->
+  <!--<div class="box">-->
+    <!--<g-button icon="setting">-->
+      <!--按钮-->
+    <!--</g-button>-->
+    <!--<g-button icon="left" icon-position="left">-->
+      <!--按钮-->
+    <!--</g-button>-->
+    <!--<g-button icon="right" icon-position="right" :loading="loadingStatus" @click="loadingStatus = !loadingStatus">-->
+      <!--按钮-->
+    <!--</g-button>-->
+    <!--<g-button>-->
+      <!--按钮-->
+    <!--</g-button>-->
+    <!--<g-button-group>-->
+      <!--<g-button icon="left">上一页</g-button>-->
+      <!--<g-button>更多</g-button>-->
+      <!--<g-button icon="right" icon-position="right">下一页</g-button>-->
+    <!--</g-button-group>-->
+  <!--</div>-->
 
 </div>
 <script src="./src/app.js"></script>
-<script src="//at.alicdn.com/t/font_1074845_qlfs8tmvv5r.js"></script>
 </body>
 </html>
