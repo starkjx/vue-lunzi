@@ -35,7 +35,9 @@ new Vue({
   },
   created(){
     this.$toast(`多行文字`, {
-      enableHtml: false
+      position: 'middle',
+      enableHtml: false,
+      autoClose: false,
     })
   },
   methods:{
