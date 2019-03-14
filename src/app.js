@@ -34,14 +34,21 @@ new Vue({
     message:'hi'
   },
   created(){
-    this.$toast(`多行文字`, {
-      position: 'middle',
-      enableHtml: false,
-      autoClose: false,
-    })
+
   },
   methods:{
     showToast(){
+      this.$toast(`随机数字${Math.random() * 100}`, {
+        position: 'middle',
+        enableHtml: false,
+        autoClose: false,
+        closeButton: {
+          text: 'ok',
+          callback(){
+            console.log('callback');
+          }
+        }
+      })
       //this.$toast('我是message')
     }
   }
