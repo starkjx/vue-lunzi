@@ -37,9 +37,18 @@ new Vue({
 
   },
   methods:{
-    showToast(){
+    showToast1(){
+      this.showToast('top')
+    },
+    showToast2(){
+      this.showToast('middle')
+    },
+    showToast3(){
+      this.showToast('bottom')
+    },
+    showToast(position){
       this.$toast(`随机数字${Math.random() * 100}`, {
-        position: 'bottom',
+        position,
         enableHtml: false,
         autoClose: false,
         closeButton: {
