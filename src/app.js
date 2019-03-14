@@ -39,7 +39,7 @@ new Vue({
   methods:{
     showToast(){
       this.$toast(`随机数字${Math.random() * 100}`, {
-        position: 'middle',
+        position: 'bottom',
         enableHtml: false,
         autoClose: false,
         closeButton: {
