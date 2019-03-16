@@ -2,7 +2,7 @@
   <div class="popover" ref="popover">
     <div v-if="visible" class="content-wrapper" ref="contentWrapper"
          :class="{[`position-${position}`]: true}">
-      <slot name="content"></slot>
+      <slot name="content" :close="close"></slot>
     </div>
     <span ref="triggerWrapper" style="display: inline-block;">
       <slot></slot>
