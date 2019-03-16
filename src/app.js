@@ -12,6 +12,11 @@ import Content from './content'
 import Footer from './footer'
 import Toast from './toast'
 import plugin from './plugin'
+import Tabs from './tabs'
+import TabsHead from './tabs-head'
+import TabsBody from './tabs-body'
+import TabsItem from './tabs-item'
+import TabsPane from './tabs-pane'
 
 Vue.component('g-button', Button)
 Vue.component('g-icon', Icon)
@@ -25,13 +30,17 @@ Vue.component('g-content', Content)
 Vue.component('g-footer', Footer)
 Vue.component('g-sider', Sider)
 Vue.component('g-toast', Toast)
+Vue.component('g-tabs', Tabs)
+Vue.component('g-tabs-head', TabsHead)
+Vue.component('g-tabs-body', TabsBody)
+Vue.component('g-tabs-item', TabsItem)
+Vue.component('g-tabs-pane', TabsPane)
 Vue.use(plugin)
 
 new Vue({
   el: '#app',
   data: {
-    loadingStatus: false,
-    message:'hi'
+    selectedTab: '2'
   },
   created(){
 
@@ -50,7 +59,7 @@ new Vue({
       this.$toast(`随机数字${Math.random() * 100}`, {
         position,
         enableHtml: false,
-        autoClose: false,
+        autoClose: 3,
         closeButton: {
           text: 'ok',
           callback(){
@@ -58,7 +67,6 @@ new Vue({
           }
         }
       })
-      //this.$toast('我是message')
     }
   }
 })

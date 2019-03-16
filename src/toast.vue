@@ -17,12 +17,11 @@
     name: 'LunziToast',
     props: {
       autoClose:{
-        type: Boolean,
-        default: true
-      },
-      autoCloseDelay:{
-        type: Number,
-        default: 10
+        type: [Boolean, Number],
+        default: 5,
+        validator(value){
+          return value === false || typeof value === 'number'
+        }
       },
       closeButton:{
         type: Object,
@@ -40,7 +39,7 @@
         type: String,
         default: 'top',
         validator(value){
-          return ['top', 'bottom', 'middle'].indexOf(value) >=0
+          return ['top', 'bottom', 'middle'].indexOf(value) >= 0
         }
       }
     },
@@ -61,7 +60,7 @@
         if(this.autoClose){
           setTimeout( () => {
             this.close()
-          }, this.autoCloseDelay * 1000)
+          }, this.autoClose * 1000)
         }
       },
       updateStyles(){
@@ -72,7 +71,7 @@
       },
       close(){
         this.$el.remove()
-        this.$emit('beforeClose')
+        this.$emit('close')
         this.$destroy()
       },
       onClickClose(){
@@ -125,7 +124,7 @@
       top: 50%;
       transform: translateX(-50%) translateY(-50%);
       .toast{
-        nimation: fade_in $animation-duration;
+        animation: fade-in $animation-duration;
       }
     }
   }
