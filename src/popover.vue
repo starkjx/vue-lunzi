@@ -1,5 +1,5 @@
 <template>
-  <div class="popover" @click="onClick" ref="popover">
+  <div class="popover" ref="popover">
     <div v-if="visible" class="content-wrapper" ref="contentWrapper"
          :class="{[`position-${position}`]: true}">
       <slot name="content"></slot>
@@ -19,11 +19,50 @@
         validator(value){
           return ['top', 'bottom', 'left', 'right'].indexOf(value) >= 0
         }
+      },
+      trigger: {
+        type: String,
+        default: 'click',
+        validator(value){
+          return ['click', 'hover'].indexOf(value) >= 0
+        }
+      }
+    },
+    mounted(){
+      if(this.trigger === 'click'){
+        this.$refs.popover.addEventListener('click',this.onClick)
+      }else{
+        this.$refs.popover.addEventListener('mouseenter',this.open)
+        this.$refs.popover.addEventListener('mouseleave',this.close)
+      }
+    },
+    destroyed(){
+      if(this.trigger === 'click'){
+        this.$refs.popover.removeEventListener('click',this.onClick)
+      }else{
+        this.$refs.popover.removeEventListener('mouseenter',this.open)
+        this.$refs.popover.removeEventListener('mouseleave',this.close)
       }
     },
     data(){
       return {
-        visible: false
+        visible: false,
+      }
+    },
+    computed:{
+      openEvent(){
+        if(this.trigger === 'click'){
+          return 'click'
+        }else{
+          return 'mouseenter'
+        }
+      },
+      closeEvent(){
+        if(this.trigger === 'click'){
+          return 'click'
+        }else{
+          return 'mouseleave'
+        }
       }
     },
     methods:{
@@ -31,24 +70,27 @@
         const {contentWrapper, triggerWrapper} = this.$refs
         document.body.appendChild(contentWrapper)
         let {width, height, top, left} = triggerWrapper.getBoundingClientRect()
-        if(this.position === 'top'){
-          contentWrapper.style.left = left + window.scrollX + 'px'
-          contentWrapper.style.top = top + window.scrollY + 'px'
-        }else if(this.position === 'bottom'){
-          contentWrapper.style.left = left + window.scrollX + 'px'
-          contentWrapper.style.top = top + height + window.scrollY + 'px'
-        }else if(this.position === 'left'){
-          let {height: heightOwn} = contentWrapper.getBoundingClientRect()
-          contentWrapper.style.left = left + window.scrollX + 'px'
-          contentWrapper.style.top = top  + window.scrollY +
-            + (height - heightOwn) / 2 + 'px'
-        }else if(this.position === 'right'){
-          let {height: heightOwn} = contentWrapper.getBoundingClientRect()
-          contentWrapper.style.left = left + width + window.scrollX + 'px'
-          contentWrapper.style.top = top  + window.scrollY +
-            + (height - heightOwn) / 2 + 'px'
+        let {height: heightOwn} = contentWrapper.getBoundingClientRect()
+        let positions = {
+          top:{
+            left: left + window.scrollX,
+            top: top + window.scrollY,
+          },
+          bottom:{
+            left: left + window.scrollY,
+            top: top + height + window.scrollY,
+          },
+          left:{
+            left: left + window.scrollX,
+            top: top + window.scrollY + (height - heightOwn) / 2,
+          },
+          right:{
+            left: left + width + window.scrollX,
+            top: top + window.scrollY + (height - heightOwn) / 2,
+          },
         }
-
+        contentWrapper.style.left = positions[this.position].left + 'px'
+        contentWrapper.style.top = positions[this.position].top + 'px'
       },
       onClickDocument (e) {
         if (this.$refs.popover &&
