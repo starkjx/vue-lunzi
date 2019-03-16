@@ -1,6 +1,7 @@
 <template>
   <div class="popover" @click="onClick" ref="popover">
-    <div v-if="visible" class="content-wrapper" ref="contentWrapper">
+    <div v-if="visible" class="content-wrapper" ref="contentWrapper"
+         :class="{[`position-${position}`]: true}">
       <slot name="content"></slot>
     </div>
     <span ref="triggerWrapper" style="display: inline-block;">
@@ -11,6 +12,15 @@
 <script>
   export default {
     name: 'LunziPopover',
+    props: {
+      position: {
+        type: String,
+        default: 'top',
+        validator(value){
+          return ['top', 'bottom', 'left', 'right'].indexOf(value) >= 0
+        }
+      }
+    },
     data(){
       return {
         visible: false
@@ -18,10 +28,27 @@
     },
     methods:{
       positionContent () {
-        document.body.appendChild(this.$refs.contentWrapper)
-        let {width, height, top, left} = this.$refs.triggerWrapper.getBoundingClientRect()
-        this.$refs.contentWrapper.style.left = left + window.scrollX + 'px'
-        this.$refs.contentWrapper.style.top = top + window.scrollY + 'px'
+        const {contentWrapper, triggerWrapper} = this.$refs
+        document.body.appendChild(contentWrapper)
+        let {width, height, top, left} = triggerWrapper.getBoundingClientRect()
+        if(this.position === 'top'){
+          contentWrapper.style.left = left + window.scrollX + 'px'
+          contentWrapper.style.top = top + window.scrollY + 'px'
+        }else if(this.position === 'bottom'){
+          contentWrapper.style.left = left + window.scrollX + 'px'
+          contentWrapper.style.top = top + height + window.scrollY + 'px'
+        }else if(this.position === 'left'){
+          let {height: heightOwn} = contentWrapper.getBoundingClientRect()
+          contentWrapper.style.left = left + window.scrollX + 'px'
+          contentWrapper.style.top = top  + window.scrollY +
+            + (height - heightOwn) / 2 + 'px'
+        }else if(this.position === 'right'){
+          let {height: heightOwn} = contentWrapper.getBoundingClientRect()
+          contentWrapper.style.left = left + width + window.scrollX + 'px'
+          contentWrapper.style.top = top  + window.scrollY +
+            + (height - heightOwn) / 2 + 'px'
+        }
+
       },
       onClickDocument (e) {
         if (this.$refs.popover &&
@@ -69,9 +96,6 @@
     border-radius: $border-radius;
     filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));
     background: white;
-    //box-shadow: 0 0 2px rgba(0,0,0,0.5);
-    transform: translateY(-100%);
-    margin-top: -20px;
     padding: .5em 1em;
     max-width: 20em;
     word-break: break-all;
@@ -82,15 +106,66 @@
       height: 0;
       border: 10px solid transparent;
       position: absolute;
-      top:100%;
-      left: 10px
     }
-    &::before{
-      border-top-color: black;
+    &.position-top{
+      margin-top: -15px;
+      transform: translateY(-100%);
+      &::before, &::after{
+        left: 10px
+      }
+      &::before{
+        border-top-color: black;
+        top: 100%;
+      }
+      &::after{
+        top: calc(100% - 1.5px);
+        border-top-color: white;
+      }
     }
-    &::after{
-      top: calc(100% - 1.5px);
-      border-top-color: white;
+    &.position-bottom{
+      margin-top: 15px;
+      &::before, &::after{
+        left: 10px
+      }
+      &::before{
+        border-bottom-color: black;
+        bottom: 100%;
+      }
+      &::after{
+        bottom: calc(100% - 1px);
+        border-bottom-color: white;
+      }
+    }
+    &.position-left{
+      margin-left: -15px;
+      transform: translateX(-100%);
+      &::before, &::after{
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &::before{
+        border-left-color: black;
+        left: 100%
+      }
+      &::after{
+        left: calc(100% - 1.5px);
+        border-left-color: white;
+      }
+    }
+    &.position-right{
+      margin-left: 15px;
+      &::before, &::after{
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &::before{
+        border-right-color: black;
+        right: 100%
+      }
+      &::after{
+        right: calc(100% - 1px);
+        border-right-color: white;
+      }
     }
   }
 </style>
