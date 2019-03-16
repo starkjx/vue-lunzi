@@ -22,7 +22,15 @@
       }
     },
     mounted() {
-      this.eventBus.$emit('update:selected', this.selected)
+      this.$children.forEach((vm) => {
+        if(vm.$options.name === 'LunziTabsHead'){
+          vm.$children.forEach((item) =>{
+            if(item.$options.name === 'LunziTabsItem' && item.name === this.selected){
+              this.eventBus.$emit('update:selected', this.selected, item)
+            }
+          })
+        }
+      })
     },
     data(){
       return {
