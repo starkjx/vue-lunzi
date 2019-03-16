@@ -5,7 +5,8 @@
 </template>
 <script>
   export default {
-    name: 'LunziTabsBody'
+    name: 'LunziTabsBody',
+    inject: ['eventBus'],
   }
 </script>
 <style>

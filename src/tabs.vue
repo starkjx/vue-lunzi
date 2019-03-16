@@ -4,6 +4,8 @@
   </div>
 </template>
 <script>
+  import Vue from 'vue'
+
   export default {
     name: 'LunziTabs',
     props: {
@@ -21,6 +23,16 @@
     },
     created() {
       //this.$emit('update:selected', xxx)
+    },
+    data(){
+      return {
+        eventBus: new Vue()
+      }
+    },
+    provide(){
+      return {
+        eventBus: this.eventBus
+      }
     }
   }
 </script>

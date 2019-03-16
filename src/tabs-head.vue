@@ -6,7 +6,11 @@
 </template>
 <script>
   export default {
-    name: 'LunziTabsHead'
+    name: 'LunziTabsHead',
+    inject: ['eventBus'],
+    created() {
+
+    }
   }
 </script>
 <style>
