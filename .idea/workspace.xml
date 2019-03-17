@@ -5,9 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac3b8491-ae2c-4319-bf8c-0202708d85e3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/components/button.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/components/button.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app.a6a4d504.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app.a6a4d504.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app.a6a4d504.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app.a6a4d504.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/button.test.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/button.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/button.test.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/col.test.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/col.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/col.test.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/collapse.test.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/collapse.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/collapse.test.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/input.test.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/input.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/input.test.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/popover.test.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/popover.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/popover.test.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/row.test.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/row.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/row.test.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/tabs-body.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/tabs-head.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/tabs-item.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/tabs-pane.test.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/tabs-pane.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/tabs-pane.test.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/tabs.test.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/tabs.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/tabs.test.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/toast.test.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/toast.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/toast.test.map" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -37,7 +74,16 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="2" column="5" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+              <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -56,18 +102,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
               <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/components/grid.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="165">
-                <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-              </first_editor>
-              <second_editor />
             </state>
           </provider>
         </entry>
@@ -214,30 +248,6 @@
               <item name="lunzi-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="lunzi-demo" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="lunzi-demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lunzi-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lunzi-demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lunzi-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name=".vuepress" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lunzi-demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lunzi-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name=".vuepress" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lunzi-demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lunzi-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -287,7 +297,7 @@
       <workItem from="1552566989928" duration="34241000" />
       <workItem from="1552745891106" duration="2214000" />
       <workItem from="1552748229732" duration="9287000" />
-      <workItem from="1552797722979" duration="28189000" />
+      <workItem from="1552797722979" duration="28736000" />
     </task>
     <task id="LOCAL-00015" summary="第一个元素不需要设置margin-left">
       <created>1551947279013</created>
@@ -636,7 +646,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171458000" />
+    <option name="totallyTimeSpent" value="172005000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1032" y="385" width="1013" height="726" extended-state="0" />
@@ -1084,13 +1094,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/components/collapse.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1185,10 +1188,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" column="5" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
         </state>
       </provider>
     </entry>
