@@ -15,15 +15,15 @@
     img{
       max-width:  100%;}
     html {
-      --button-height: 32px;
-      --font-size: 14px;
-      --button-bg: white;
-      --button-active-bg: #eee;
-      --border-radius: 4px;
-      --color: #333;
-      --border-color: #999;
-      --border-color-hover: #666;
-    }
+       --button-height: 32px;
+       --font-size: 14px;
+       --button-bg: white;
+       --button-active-bg: #eee;
+       --border-radius: 4px;
+       --color: #333;
+       --border-color: #999;
+       --border-color-hover: #666;
+     }
 
     #app {
     }
@@ -36,14 +36,30 @@
 </head>
 <body>
 <div id="app" style="padding-top: 100px; padding-left: 100px">
-
-
-  <g-collapse selected="2">
-    <g-collapse-item title="11" name="1">111</g-collapse-item>
-    <g-collapse-item title="22" name="2">222</g-collapse-item>
-    <g-collapse-item title="33" name="3">333</g-collapse-item>
-  </g-collapse>
-
+  <g-popover trigger="hover">
+    <g-button>上方弹出</g-button>
+    <template slot="content">
+      弹出内容
+    </template>
+  </g-popover>
+  <g-popover position="bottom" trigger="hover">
+    <g-button>下方弹出</g-button>
+    <template slot="content">
+      弹出内容
+    </template>
+  </g-popover>
+  <g-popover position="left" trigger="hover">
+    <g-button>左边弹出</g-button>
+    <template slot="content">
+      弹出内容
+    </template>
+  </g-popover>
+  <g-popover position="right" trigger="hover">
+    <g-button>右边弹出</g-button>
+    <template slot="content">
+      弹出内容
+    </template>
+  </g-popover>
 
 </div>
 <script src="./src/app.js"></script>

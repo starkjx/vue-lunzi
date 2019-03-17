@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper" :class="toastClasses">
+  <div class="gulu-toast" :class="toastClasses">
     <div class="toast" ref="toast">
       <div class="message">
         <slot v-if="!enableHtml"></slot>
@@ -7,25 +7,26 @@
       </div>
       <div class="line" ref="line"></div>
       <span class="close" v-if="closeButton" @click="onClickClose">
-      {{closeButton.text}}
+        {{closeButton.text}}
       </span>
     </div>
   </div>
 </template>
 <script>
+  //构造组件的选项
   export default {
-    name: 'LunziToast',
+    name: 'GuluToast',
     props: {
-      autoClose:{
+      autoClose: {
         type: [Boolean, Number],
         default: 5,
-        validator(value){
-          return value === false || typeof value === 'number'
+        validator (value) {
+          return value === false || typeof value === 'number';
         }
       },
-      closeButton:{
+      closeButton: {
         type: Object,
-        default(){
+        default () {
           return {
             text: '关闭', callback: undefined
           }
@@ -38,92 +39,91 @@
       position: {
         type: String,
         default: 'top',
-        validator(value){
+        validator (value) {
           return ['top', 'bottom', 'middle'].indexOf(value) >= 0
         }
       }
     },
-    mounted() {
-      this.execAutoClose()
+    mounted () {
       this.updateStyles()
-
+      this.execAutoClose()
     },
-    computed:{
-      toastClasses(){
+    computed: {
+      toastClasses () {
         return {
           [`position-${this.position}`]: true
         }
       }
     },
-    methods:{
-      execAutoClose(){
-        if(this.autoClose){
-          setTimeout( () => {
-            this.close()
-          }, this.autoClose * 1000)
-        }
-      },
-      updateStyles(){
+    methods: {
+      updateStyles () {
         this.$nextTick(() => {
           this.$refs.line.style.height =
             `${this.$refs.toast.getBoundingClientRect().height}px`
         })
       },
-      close(){
+      execAutoClose () {
+        if (this.autoClose) {
+          setTimeout(() => {
+            this.close()
+          }, this.autoClose * 1000)
+        }
+      },
+      close () {
         this.$el.remove()
         this.$emit('close')
         this.$destroy()
       },
-      onClickClose(){
+      onClickClose () {
         this.close()
-        if(this.closeButton && typeof this.closeButton.callback === 'function'){
-          this.closeButton.callback(this)
+        if (this.closeButton && typeof this.closeButton.callback === 'function') {
+          this.closeButton.callback(this)//this === toast实例
         }
       }
     }
   }
 </script>
-<style lang="scss" scoped>
+<style scoped lang="scss">
   $font-size: 14px;
   $toast-min-height: 40px;
   $toast-bg: rgba(0, 0, 0, 0.75);
-  $animation-duration: 300ms;
   @keyframes slide-up {
-    0% {opacity: 0; transform: translateY(100%)}
-    100% {opacity: 1; transform: translateY(0%)}
+    0% {opacity: 0; transform: translateY(100%);}
+    100% {opacity: 1;transform: translateY(0%);}
   }
   @keyframes slide-down {
-    0% {opacity: 0; transform: translateY(-100%)}
-    100% {opacity: 1; transform: translateY(0%)}
+    0% {opacity: 0; transform: translateY(-100%);}
+    100% {opacity: 1;transform: translateY(0%);}
   }
   @keyframes fade-in {
-    0% {opacity: 0;}
+    0% {opacity: 0; }
     100% {opacity: 1;}
   }
-  .wrapper{
+  .gulu-toast {
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
-    &.position-top{
+    $animation-duration: 300ms;
+    &.position-top {
       top: 0;
-      .toast{
+      .toast {
         border-top-left-radius: 0;
         border-top-right-radius: 0;
         animation: slide-down $animation-duration;
       }
     }
-    &.position-bottom{
+    &.position-bottom {
       bottom: 0;
-      .toast{
+      .toast {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
         animation: slide-up $animation-duration;
       }
     }
-    &.position-middle{
+    &.position-middle {
       top: 50%;
       transform: translateX(-50%) translateY(-50%);
-      .toast{
+      .toast {
         animation: fade-in $animation-duration;
       }
     }
@@ -135,11 +135,11 @@
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.50); padding: 0 16px;
     .message {
       padding: 8px 0;
-      max-width: 500px;
     }
     .close {
       padding-left: 16px;
       flex-shrink: 0;
+      cursor: pointer;
     }
     .line {
       height: 100%;

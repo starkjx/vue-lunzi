@@ -1,11 +1,11 @@
 <template>
-  <div class="content">
+  <div class="gunzi-content">
     <slot></slot>
   </div>
 </template>
 
 <style lang="scss" scoped>
-  .content {
+  .gunzi-content {
     flex-grow: 1;
   }
 </style>
