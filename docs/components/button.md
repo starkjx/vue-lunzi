@@ -1,14 +1,8 @@
 ---
-title: button
-sidebarDepth: 2
+title: Button - 按钮
 ---
-
-# 按钮
-
+# 按钮组件
 
 <ClientOnly>
-    <button-demo></button-demo>
+  <button-demo-1/>
 </ClientOnly>
-
-
-

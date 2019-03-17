@@ -1,6 +1,6 @@
 module.exports = {
   base: '/vue-lunzi/',
-  title: 'lunzi UI',
+  title: '咕噜 UI',
   description: '一个简易但好用的 UI 框架',
   themeConfig: {
     sidebar: [
@@ -8,13 +8,13 @@ module.exports = {
         title: '入门',
         children: [
           '/install/',
-          '/get-started/'
+          '/get_started/'
         ]
       },
       {
         title: '组件',
         children: [
-          '/components/button',
+          '/components/button'
         ]
       }
     ]
