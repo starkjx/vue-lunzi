@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 
 <ClientOnly>
-    <button-demo/>
+    <button-demo></button-demo>
 </ClientOnly>
 
 
