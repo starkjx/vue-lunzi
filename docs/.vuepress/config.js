@@ -1,6 +1,6 @@
 module.exports = {
   base: '/vue-lunzi/',
-  title: '咕噜 UI',
+  title: 'lunzi UI',
   description: '一个简易但好用的 UI 框架',
   themeConfig: {
     sidebar: [
