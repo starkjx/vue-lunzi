@@ -1,0 +1,42 @@
+.g-icon[data-v-d19720] {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}.wrapper[data-v-cd9b3e] {
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+}
+.wrapper[data-v-cd9b3e] > :not(:last-child) {
+  margin-right: 0.5em;
+}
+.wrapper > input[data-v-cd9b3e] {
+  height: 32px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  padding: 0 8px;
+  font-size: inherit;
+}
+.wrapper > input[data-v-cd9b3e]:hover {
+  border-color: #666;
+}
+.wrapper > input[data-v-cd9b3e]:focus {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+.wrapper > input[disabled][data-v-cd9b3e], .wrapper > input[readonly][data-v-cd9b3e] {
+  border-color: #bbb;
+  color: #bbb;
+  cursor: not-allowed;
+}
+.wrapper.error > input[data-v-cd9b3e] {
+  border-color: #F1453D;
+}
+.icon-error[data-v-cd9b3e] {
+  fill: #F1453D;
+}
+.errorMessage[data-v-cd9b3e] {
+  color: #F1453D;
+}

@@ -1,4 +1,5 @@
 module.exports = {
+  base: '/vue-lunzi/',
   title: 'lunzi UI',
   description: '一个小小的UI库',
   themeConfig: {
