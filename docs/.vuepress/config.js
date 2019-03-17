@@ -14,13 +14,13 @@ module.exports = {
       {
         title: '组件',
         children: [
-          './components/button',
-          './components/layout',
-          './components/tabs',
-          './components/input',
-          './components/popover',
-          './components/grid',
-          './components/collapse',
+          '/components/button',
+          '/components/layout',
+          '/components/tabs',
+          '/components/input',
+          '/components/popover',
+          '/components/grid',
+          '/components/collapse',
         ]
       }
     ]

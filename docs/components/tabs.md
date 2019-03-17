@@ -7,5 +7,5 @@ sidebarDepth: 2
 
 
 <ClientOnly>
-    <tabs-demo/>
+    <tabs-demo></tabs-demo>
 </ClientOnly>
