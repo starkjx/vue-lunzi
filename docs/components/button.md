@@ -1,7 +1,7 @@
 ---
-title: Button - 按钮
+title: button
 ---
-# 按钮组件
+# 按钮
 
 <ClientOnly>
   <button-demo-1/>
